@@ -1,0 +1,146 @@
+/* CSS file for : page_1.html ,page_2.html ,page_3.html ,page_4.html ,page_5.html */
+body{
+    background-color: #FFD1D1;
+    font-family: 'Blinker', sans-serif;
+    margin: 0;
+    animation: fade ease-in-out 3s;
+}
+
+.nav_container{
+    display: flex;
+    background-color: #FFD1D1;
+    box-shadow: 0px 1px 10px 5px #FF9494;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    animation: slideY ease-in-out 2s;
+}
+
+.nav{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    padding: 5vh 5vh;
+    transition: all ease 1s;
+}
+
+.nav:hover{
+    transform: scale(1.1);
+}
+
+.logo{
+    background-color:whitesmoke;
+    color: #FF9494;
+    border-radius: 0 50px 50px 0;
+}
+
+
+.grid_container{ 
+    width: 70%;
+    height: 70%; 
+    margin: 10vh auto;
+    padding: 20px;
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    gap: 0 .1em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "pic top"
+      "pic par"
+      "pic bot";
+    overflow: hidden;
+    background-color: whitesmoke;
+  }
+
+.grid_container *{
+    margin: 10px;
+}
+.image{
+    grid-area: pic;
+    box-shadow: 5px 5px 0px 5px #FF9494;
+    border-radius: 50px;
+    width: 25vw;
+    height: 40vw;
+    object-fit: cover;
+    align-self: center;
+    justify-self: center;
+  }
+
+.top{
+    grid-area: top;
+    border-bottom: 1px solid black ;
+    font-size: 3vw;
+    color: #FF9494;
+}
+.par{
+    grid-area: par;
+    font-size: 1.5vw;
+    text-indent: 10%;
+    text-align: justify;
+
+  }
+.bot{
+    grid-area: bot;
+    text-align: end;
+  }
+
+@keyframes fade {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+}
+
+
+@keyframes slideX {
+    0%{
+      transform: translateX(-100vh);
+    }
+    100%{
+      transform: translateX(0vh)
+    }
+    
+}
+
+@keyframes slideY {
+    0%{
+      transform: translateY(-100vh);
+    }
+    100%{
+      transform: translateY(0vh)
+    }
+    
+}
+
+@media screen and (max-width:700px) {
+    .grid_container{
+      grid-template-columns: 1.5fr;
+      grid-template-rows: 3fr 0.5fr 2fr 0.5fr;
+      grid-template-areas:
+      "pic"
+      "top"
+      "par"
+      "bot";
+    }
+    .top{
+      font-size: 5vw;
+
+    }
+    .par{
+      font-size: 2.5vw;
+    }
+
+    .image{
+      width: 50vw ;
+      height: 50vw;
+    }
+
+
+  
+}
+  

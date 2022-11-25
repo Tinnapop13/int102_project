@@ -1,0 +1,167 @@
+/* CSS file for : home.html */
+body {
+    background-color: #FFD1D1;
+    font-family: 'Blinker', sans-serif;
+    margin: 0;
+    animation: fade ease-in-out 3s;
+}
+
+.nav_container {
+    display: flex;
+    background-color: #FFD1D1;
+    box-shadow: 0px 1px 10px 5px #FF9494;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    animation: slideY ease-in-out 2s;
+}
+
+.nav {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    padding: 5vh 5vh;
+    transition: all ease 1s;
+}
+
+.nav:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    background-color: whitesmoke;
+
+    color: #FF9494;
+    border-radius: 0 50px 50px 0;
+}
+
+.info_topic {
+    position: absolute;
+    padding: 2vh;
+}
+a img{
+  object-fit: cover;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+.date {
+    font-size: 8vh;
+}
+
+.image_a {
+    top: 30vh;
+}
+
+.image_b {
+    top: 20vh;
+}
+
+.image_c {
+    top: 23vh;
+}
+
+.image_d {
+    top: 25.5vh;
+}
+
+.image_e {
+    top: 25vh;
+}
+
+.all_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: slideX ease-in-out 2s;
+}
+
+.content_type_1 {
+    display: flex;
+    flex-direction: column;
+    justify-items: end;
+    height: 60vh;
+    width: 30vh;
+    color: whitesmoke;
+    border-radius: 20px;
+    background-color: #FF9494;
+    box-shadow: 5px 5px 20px 2px #b97c7c;
+    margin: 10vh 5vh;
+    overflow: hidden;
+    transition: all ease 1s;
+}
+.caption{
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0; 
+    left: 0;
+    text-align: center;
+    font-family:'Kdam Thmor Pro', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    visibility: none; 
+    opacity: 0;
+    z-index: 2;
+  }
+.content_type_1:hover .caption,.content_type_2:hover .caption{
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    transition: all ease .75s;
+  }
+
+.content_type_1:hover,
+.content_type_2:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.content_type_2 {
+    display: flex;
+    height: 60vh;
+    width: 30vh;
+    flex-direction: column;
+    justify-items: end;
+    color: #FF9494;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 20px 2px #b97c7c;
+    margin: 10vh 5vh;
+    overflow: hidden;
+    transition: all ease .75s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideX {
+    0% {
+        transform: translateX(-100vh);
+    }
+    100% {
+        transform: translateX(0vh)
+    }
+}
+
+@keyframes slideY {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(0vh)
+    }
+}

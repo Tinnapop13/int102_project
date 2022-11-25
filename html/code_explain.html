@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;600&family=Shrikhand&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="../css/code_explain.css">
+    <link rel="shortcut icon" href="../image/icon_sakura.png" type="image/x-icon">
+    <title>Home</title>
+</head>
+<body>
+    <!-- navigation bar -->
+    <div class="nav_container">
+        <a href="../index.html" class="nav logo">My Diary</a>
+        <a href="../html/home.html" class="nav">Home</a>
+        <a href="../html/about.html" class="nav">About</a>
+    </div>
+    
+   <div class="container">
+        <div class="animation_section">
+            <h2>CSS : Animations</h2>
+            <p>เป็นการทำให้ element ที่เลือกเกิดการเคลื่อนไหวหรือเปลี่ยนแปลงไปตามที่ได้กำหนดไว้ หลักการทำงานของ CSS3 Animations ก็คือ 1. สร้าง Animation name และ 2. Add Keyframe ซึ่งเมื่อเราสร้าง Animation name แล้ว เราสามารถที่จะเพิ่มคำสั่งให้ animation ที่เราสร้างขึ้นมานั้น ทำงานในรูปแบบต่างๆ ด้วยคำสั่งที่เราต้องการ</p>
+            <h3>คำสั่งพื้นฐานของ Animation ใน CSS3 มีดังนี้</h3>
+            <ul>
+                <li>animation-name คือ การตั้งชื่อให้กับรูปแบบการแสดงการเคลื่อนไหว</li>
+                <li>animation-duration คือ ระยะเวลาของการเคลื่อนไหว จาก ต้นทาง ไป ปลายทาง</li>
+                <li>animation-timing-function คือ รูปแบบการเล่นใน 1 รอบของการเคลื่อนไหวของ keyframe</li>
+                <li>animation-iteration-count คือ การทำซ้ำ เช่น จะให้ทำกี่รอบ หรือ infinite คือวนไม่หยุด</li>
+                <li>animation-direction คือ การสั่งทิศทางการเล่น เช่น จาก 1 ถึง 10 หรือจะให้เล่นถอยหลัง จาก 10 มา 1</li>
+                <li>animation-delay คือ จะให้เริ่มทำทันที หรือ ดีเลย์ ตามเวลาที่กำหนด เช่น ถ้าเรากดปุ่มแล้วต้องการให้ animation ที่เราสั่งงานเริ่มเล่นเมื่อเวลาผ่านไปหลังจากกดปุ่ม 2 วินาที เราสามารถกำหนดได้ใน animation-delay โดยค่าเริ่มต้นคือ 0 ซึ่งเป็นการสั่งให้เล่นทันที</li>
+                <li>animation คือ shorthand property หรือการเขียนแบบย่อ โดยการใส่ค่าควรเรียงลำดับจาก animation-name || animation-duration || animation-timing-function || animation-delay || animation-iteration-count || animation-direction</li>
+            </ul>
+            <p>เราสามารถที่จะสร้างรูปแบบการเคลื่อนไหวให้แก่ Object ก่อน หรือ สร้าง Keyframes ขึ้นมาก่อนก็ได้ แล้วแต่ความถนัดส่วนบุคคล การเคลื่อนไหวของแต่ละอย่างนั้นจะเริ่มนับจากจุด เริ่ม ไปยังจุดสิ้นสุด โดยที่เราเป็นคนกำหนดเอง เราสามารถกำหนดว่า เริ่มจาก A ไปยัง B ให้ใช้ A เป็นจุดที่ 0% และ B เป็นจุดที่ 100% ของการเดินทาง โดยในระหว่างทางที่เดินนั้น เราสามารถเพิ่มคำสั่งงาน Animation ได้อีกใน Keyframes นั้นๆ</p>
+           <h3>Example : </h3>
+           <div class="animation_example">
+            <img src="../image/animation_code.jpg">
+            <img src="../image/animation_example.gif">
+           </div>
+        </div>
+        <div class="z-index_section">
+           <h2>CSS : z-index</h2>
+           <p>z-index คือ ตัวกำหนดจัดการ การซ้อนทับของlayout ในแกน z ยิ่ง value มีค่ามากจะทำให้ element ที่กำหนดซ้อนอยู่หน้าสุด ยิ่งน้อยจะยิ่งโดนทับไว้ข้างหลัง </p>
+           <p>element ที่สามารถใช้ z-index ได้ต้องมีการกำหนด position ตัวใดตัวหนึ่ง ดังนี้
+
+            position : relative || absolute || fixed || sticky ;
+            z-index:auto || number</p>
+        </div>
+        <div class="transform_section">
+            <h2>CSS : transform</h2>
+            <p>transform คือ การที่จะใส่เอฟเฟ็กต่างๆให้แก่ element โดยมีวิธีดังนี้</p>
+            <ul>
+                <li>translate() - การย้าย element ไปตำแหน่งที่กำหนด</li>
+                <li>rotate() - การหมุน element</li>
+                <li>scale() - การย่อขยาย element</li>
+                <li>skewX() - ทำให้เอียงในแนวนอน</li>
+                <li>skewY() - ทำให้เอียงในแนวตั้ง</li>
+                <li>matrix() - เป็นการรวม transform ทั้งหมดยกเว้น rotate เข้าด้วยกันในบรรทัดเดียว
+                    โดยเขียนได้ดังนี้ matrix( scaleX() ,skewY() ,skewX() ,scaleY() ,translateX() ,translateY())
+                </li>
+            </ul>
+        </div>
+        <div class="object-fit_section">
+            <h2>CSS : object-fit</h2>
+            <p>object-fit คือ การกำหนดให้ tag img หรือ video ปรับขนาดตาม container โดยสามารถกำหนดได้ดังนี้</p>
+            <ul>
+                <li>fill - นี่คือค่าเริ่มต้นวัตถุจะปรับขนาดตามมิติที่กำหนดไว้ จะยืดหรือหดเพื่อให้พอดีกับกล่องที่มาคลุมไว้</li>
+                <li>contain - The image keeps its aspect ratio, but is resized to fit within the given dimension</li>
+                <li>cover - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit</li>
+                <li>none - The image is not resized</li>
+                <li>scale-down - the image is scaled down to the smallest version of none or contain</li>
+            </ul>
+        </div>
+        <div class="transition_section">
+            <h2>CSS : transition</h2>
+            <p>transition เป็นสิ่งที่ช่วยให้การเปลี่ยนค่าต่างๆ ของ element เป็นไปอย่างราบรื่น</p>
+            <ul>
+                <li>transition-property - กำหนด property ที่ต้องการใช้ transition</li>
+                <li>transition-duration - กำหนดระยะเวลาในการ transition</li>
+                <li>transition-timing-function - กำหนดรูปแบบการเร่งความเร็วของ transition</li>
+                <li>transition-delay - กำหนดความล่าช้าของ transition</li>
+                <li>transition - กำหนด transition รวมกันเป็นบรรทัดเดียว
+                    โดยใส่ค่าตามนี้ property duration timing-function delay โดย timing-function และ delay ไม่จำเป็นต้องกำหนดก็ได้</li>
+            </ul>
+        </div>
+     </div>
+</body>
+</html>
